@@ -52,7 +52,7 @@ img {
 .nav__links {
   list-style: none;
   display: flex;
-  transition: 0.4s;
+  transition: 0.2s;
 }
 .nav__link {
   font-size: 1.8rem;
@@ -72,7 +72,7 @@ img {
   width: 100%;
   height: 2px;
   background-color: #000;
-  transition: 0.4s;
+  transition: 0.2s;
 }
 
 main {
