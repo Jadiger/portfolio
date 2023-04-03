@@ -20,6 +20,7 @@
     &__links {
         list-style: none;
         display: flex;
+        transition: $normal-transition;
     }
     &__link {
         font-size: 1.8rem;
@@ -38,6 +39,7 @@
             width: 100%;
             height: 2px;
             background-color: #000;
+            transition: $normal-transition;
         }
     }
 }

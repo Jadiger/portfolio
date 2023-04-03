@@ -1,3 +1,4 @@
+@use './variables' as *;
 @use './base' as *;
 @use './sections/nav' as *;
 @use './sections/main' as *;
@@ -57,29 +58,67 @@
 }
 
 @media screen and (max-width:768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-body-active {
+        overflow-y: hidden;
+    }
     .container {
         width: 85%;
     }
     .nav {
-        padding: 0 30px;
+        padding: 0 25px;
         &__links {
-            display: none;
+            width: 100%;
+            height: calc(100vh - $nav-height);
+            background-color: #fff;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: $nav-height;
+            left: 0;
+            transform: translateX(-100%);
+            z-index: 20;
+        }
+        .active {
+            transform: translateX(0);
+            box-shadow : inset $box-shadow;
+        }
+        &__link {
+            margin: 30px;
         }
         &__burger {
             display: flex;
+            align-items: center;
+        }
+        .burger_active {
+            justify-content: center;
+            span:nth-child(1) {
+                transform: translateY(100%) rotate(45deg);
+            }
+            span:nth-child(2) {
+                width: 0;
+            }
+            span:nth-child(3) {
+                transform: translateY(-100%) rotate(-45deg);
+            }
         }
     }
 }
 @media screen and (max-width: 576px) {
+    $nav-height : 60px;
     .nav {
-        padding: 20px;
+
+        padding: 0 20px;
         &__logo {
             font-size: 2rem;
         }
     }
     .container {
         width: 100%;
-        padding: 0 30px;
+        padding: 0 15px;
     }
     .main {
         &__text-title {
