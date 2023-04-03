@@ -1,0 +1,97 @@
+@use './base' as *;
+@use './sections/nav' as *;
+@use './sections/main' as *;
+
+
+
+@media screen and (max-width:1200px) {
+    .container {
+        width: 75%;
+    }
+    .main {
+        &__text-title {
+            font-size: 5rem;
+            line-height: 6rem;
+        }
+    }
+}
+
+
+@media screen and (max-width:992px) {
+    .main {
+        height: auto;
+            padding: 50px 0;
+        &__info {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__text {
+            text-align: center;
+            width: 100%;
+            order: 2;
+        }
+        &__img {
+            width: 60%;
+            order: 1;
+            margin-bottom: 30px;
+        }
+        &__skills {
+            flex-wrap: wrap;
+
+        }
+        &__skills-title {
+            width: auto;
+            text-align: center;
+            font-size: 2rem;
+            padding: 10px;
+            margin: 0 auto 20px;
+            border-right:0;
+            border-bottom: 3px solid;
+        }
+        &__skills-list {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+    
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        width: 85%;
+    }
+    .nav {
+        padding: 0 30px;
+        &__links {
+            display: none;
+        }
+        &__burger {
+            display: flex;
+        }
+    }
+}
+@media screen and (max-width: 576px) {
+    .nav {
+        padding: 20px;
+        &__logo {
+            font-size: 2rem;
+        }
+    }
+    .container {
+        width: 100%;
+        padding: 0 30px;
+    }
+    .main {
+        &__text-title {
+            font-size: 3.5rem;
+            line-height: 4.5rem;
+        }
+        &__text-desc {
+            font-size: 1.6rem;
+            line-height: 2.3rem;
+        }
+        &__img {
+            width: 70%;
+        }
+    }
+}

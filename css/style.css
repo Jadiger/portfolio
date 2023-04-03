@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  padding-top: 90px;
+  color: #2D2E32;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  width: 65%;
+  height: 100%;
+  margin: 0 auto;
+  border: 1px solid #000;
+}
+
+.nav {
+  font-weight: 600;
+  width: 100%;
+  background-color: #fff;
+  height: 90px;
+  padding: 0 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.299);
+  z-index: 100;
+}
+.nav__logo {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.nav__links {
+  list-style: none;
+  display: flex;
+}
+.nav__link {
+  font-size: 1.8rem;
+  margin-left: 25px;
+}
+.nav__link a {
+  color: #000;
+}
+.nav__burger {
+  width: 28px;
+  height: 18px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.nav__burger span {
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+
+main {
+  background-color: #F9F9F9;
+  width: 100%;
+  height: calc(100vh - 90px);
+}
+
+.main__block {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.main__text {
+  width: 60%;
+  height: 100%;
+  height: auto;
+}
+.main__text-title {
+  font-size: 6rem;
+  line-height: 7rem;
+  margin-bottom: 20px;
+}
+.main__text-desc {
+  color: #767676;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 3rem;
+}
+.main__img {
+  width: 30%;
+  height: 100%;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+  border: 3px solid #000;
+  border-radius: 50% 40% 30% 70%/50% 30% 70% 55%;
+  animation: image__border 8s infinite linear;
+}
+.main__skills {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.main__skills-title {
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 0px 15px;
+  margin-right: 50px;
+  border-right: 3px solid #767676;
+}
+.main__skills-list {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.main__skill {
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.299);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__skill img {
+  width: 60%;
+}
+
+/*------Main Img Animation--------*/
+@keyframes image__border {
+  0% {
+    border-radius: 50% 40% 30% 70%/50% 30% 70% 55%;
+  }
+  20% {
+    border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+  }
+  40% {
+    border-radius: 58% 42% 54% 46%/60% 67% 33% 40%;
+  }
+  60% {
+    border-radius: 72% 28% 73% 27%/26% 36% 64% 74%;
+  }
+  80% {
+    border-radius: 23% 77% 46% 54%/57% 66% 34% 43%;
+  }
+  100% {
+    border-radius: 50% 40% 30% 70%/50% 30% 70% 55%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 75%;
+  }
+  .main__text-title {
+    font-size: 5rem;
+    line-height: 6rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .main {
+    height: auto;
+    padding: 50px 0;
+  }
+  .main__info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main__text {
+    text-align: center;
+    width: 100%;
+    order: 2;
+  }
+  .main__img {
+    width: 60%;
+    order: 1;
+    margin-bottom: 30px;
+  }
+  .main__skills {
+    flex-wrap: wrap;
+  }
+  .main__skills-title {
+    width: auto;
+    text-align: center;
+    font-size: 2rem;
+    padding: 10px;
+    margin: 0 auto 20px;
+    border-right: 0;
+    border-bottom: 3px solid;
+  }
+  .main__skills-list {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: 85%;
+  }
+  .nav {
+    padding: 0 30px;
+  }
+  .nav__links {
+    display: none;
+  }
+  .nav__burger {
+    display: flex;
+  }
+}
+@media screen and (max-width: 576px) {
+  .nav {
+    padding: 20px;
+  }
+  .nav__logo {
+    font-size: 2rem;
+  }
+  .container {
+    width: 100%;
+    padding: 0 30px;
+  }
+  .main__text-title {
+    font-size: 3.5rem;
+    line-height: 4.5rem;
+  }
+  .main__text-desc {
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+  }
+  .main__img {
+    width: 70%;
+  }
+}/*# sourceMappingURL=style.css.map */

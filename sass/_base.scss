@@ -1,0 +1,28 @@
+@use './variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+    padding-top: $nav-height;
+    color : $color;
+}
+a {
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}
+.container {
+    width: 65%;
+    height: 100%;
+    margin: 0 auto;
+    border: 1px solid #000;
+}
