@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 html {
     font-size: 62.5%;
@@ -21,7 +22,8 @@ img {
     width: 100%;
 }
 .container {
-    width: 65%;
+    max-width: 110rem;
+    padding: 0 4rem;
     height: 100%;
     margin: 0 auto;
 }

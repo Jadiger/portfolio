@@ -2,12 +2,13 @@
 @use './base' as *;
 @use './sections/nav' as *;
 @use './sections/main' as *;
+@use './sections/about' as *;
 
 
 
 @media screen and (max-width:1200px) {
     .container {
-        width: 75%;
+        max-width: 95rem;
     }
     .main {
         &__text-title {
@@ -19,6 +20,10 @@
 
 
 @media screen and (max-width:992px) {
+    .container {
+        padding: 0;
+        width: 80%;
+    }
     .main {
         height: auto;
             padding: 50px 0;
@@ -52,6 +57,25 @@
         &__skills-list {
             width: 100%;
             justify-content: center;
+        }
+    }
+    .about {
+        padding: 60px 0;
+        &__block {
+            flex-direction: column;
+            text-align: center;
+
+        }
+        &__img {
+            width: 100%;
+            padding: 0;
+            margin-bottom: 25px;
+            img {
+                width: 70%;
+            }
+        }
+        &__me {
+            width: 100%;
         }
     }
     
@@ -106,6 +130,14 @@
             }
         }
     }
+    .about{
+        padding: 40px 0;
+        &__img {
+            img {
+                width: 80%;
+            }
+        }
+    }
 }
 @media screen and (max-width: 576px) {
     $nav-height : 60px;
@@ -118,7 +150,7 @@
     }
     .container {
         width: 100%;
-        padding: 0 15px;
+        padding: 0 25px;
     }
     .main {
         &__text-title {
@@ -131,6 +163,14 @@
         }
         &__img {
             width: 70%;
+        }
+    }
+    .about {
+        &__me {
+            &-title {
+                font-size: 2.5rem;
+                line-height: 3.2rem;
+            }
         }
     }
 }

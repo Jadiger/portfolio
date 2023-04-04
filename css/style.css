@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -25,7 +26,8 @@ img {
 }
 
 .container {
-  width: 65%;
+  max-width: 110rem;
+  padding: 0 4rem;
   height: 100%;
   margin: 0 auto;
 }
@@ -175,9 +177,43 @@ main {
     border-radius: 50% 40% 30% 70%/50% 30% 70% 55%;
   }
 }
+.about {
+  padding: 100px 0;
+}
+.about__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about__img {
+  width: 45%;
+  padding: 20px 0;
+}
+.about__img img {
+  width: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 40px;
+  background-color: #ACA6E7;
+}
+.about__me {
+  width: 55%;
+}
+.about__me-header {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #767676;
+  text-transform: uppercase;
+}
+.about__me-title {
+  font-size: 3rem;
+  line-height: 4rem;
+  margin-bottom: 30px;
+}
+
 @media screen and (max-width: 1200px) {
   .container {
-    width: 75%;
+    max-width: 95rem;
   }
   .main__text-title {
     font-size: 5rem;
@@ -185,6 +221,10 @@ main {
   }
 }
 @media screen and (max-width: 992px) {
+  .container {
+    padding: 0;
+    width: 80%;
+  }
   .main {
     height: auto;
     padding: 50px 0;
@@ -218,6 +258,24 @@ main {
   .main__skills-list {
     width: 100%;
     justify-content: center;
+  }
+  .about {
+    padding: 60px 0;
+  }
+  .about__block {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about__img {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 25px;
+  }
+  .about__img img {
+    width: 70%;
+  }
+  .about__me {
+    width: 100%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -269,6 +327,12 @@ main {
   .nav .burger_active span:nth-child(3) {
     transform: translateY(-100%) rotate(-45deg);
   }
+  .about {
+    padding: 40px 0;
+  }
+  .about__img img {
+    width: 80%;
+  }
 }
 @media screen and (max-width: 576px) {
   .nav {
@@ -279,7 +343,7 @@ main {
   }
   .container {
     width: 100%;
-    padding: 0 15px;
+    padding: 0 25px;
   }
   .main__text-title {
     font-size: 3.5rem;
@@ -291,5 +355,9 @@ main {
   }
   .main__img {
     width: 70%;
+  }
+  .about__me-title {
+    font-size: 2.5rem;
+    line-height: 3.2rem;
   }
 }/*# sourceMappingURL=style.css.map */
