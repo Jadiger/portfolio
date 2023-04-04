@@ -343,7 +343,7 @@ main {
   }
   .container {
     width: 100%;
-    padding: 0 25px;
+    padding: 0 15px;
   }
   .main__text-title {
     font-size: 3.5rem;
