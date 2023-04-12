@@ -297,7 +297,7 @@ main {
   color: #767676;
   display: block;
   padding: 10px;
-  margin: 10px 0px;
+  margin-top: 10px;
   transition: 0.2s;
 }
 .portfolio__links a:hover {
@@ -439,7 +439,7 @@ main {
   }
   .portfolio__info {
     width: 100%;
-    padding: 20px;
+    padding: 10px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -467,5 +467,16 @@ main {
   .about__me-title {
     font-size: 2.5rem;
     line-height: 3.2rem;
+  }
+  .portfolio__item {
+    padding: 15px;
+    border-radius: 10px;
+  }
+  .portfolio__img {
+    height: 250px;
+    border-radius: 7px;
+  }
+  .portfolio__info {
+    padding: 10px 0 0;
   }
 }/*# sourceMappingURL=style.css.map */

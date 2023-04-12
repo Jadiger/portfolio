@@ -150,7 +150,7 @@
         }
         &__info {
             width: 100%;
-            padding: 20px;
+            padding: 10px;
         }
     }
 }
@@ -186,6 +186,19 @@
                 font-size: 2.5rem;
                 line-height: 3.2rem;
             }
+        }
+    }
+    .portfolio {
+        &__item {
+            padding: 15px;
+            border-radius:10px;
+        }
+        &__img {
+            height: 250px;
+            border-radius:7px;
+        }
+        &__info {
+            padding: 10px 0 0;
         }
     }
 }
