@@ -211,6 +211,99 @@ main {
   margin-bottom: 30px;
 }
 
+.portfolio {
+  background-color: #F9F9F9;
+  padding: 50px 0;
+}
+.portfolio__title {
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 30px 0;
+}
+.portfolio__item {
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.299);
+  padding: 20px;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+.portfolio__item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.portfolio__img {
+  position: relative;
+  width: 55%;
+  height: 350px;
+  border-radius: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.552);
+  overflow: hidden;
+  cursor: pointer;
+}
+.portfolio__img img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 10s linear;
+}
+.portfolio__img:hover img {
+  top: 100%;
+  transform: translateY(-100%);
+}
+.portfolio__info {
+  height: 100%;
+  width: 45%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.portfolio__name {
+  color: #2D2E32;
+  font-size: 2rem;
+  padding: 10px 0;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.portfolio__desc {
+  color: #767676;
+  font-weight: 500;
+  text-align: center;
+  padding: 10px;
+}
+.portfolio__techs {
+  display: flex;
+  justify-content: center;
+}
+.portfolio__techs span {
+  display: block;
+  padding: 5px 10px;
+  margin: 0 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.288);
+}
+.portfolio__links {
+  display: flex;
+  justify-content: center;
+}
+.portfolio__links a {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #767676;
+  display: block;
+  padding: 10px;
+  margin: 10px 0px;
+  transition: 0.2s;
+}
+.portfolio__links a:hover {
+  color: #2D2E32;
+}
+
 @media screen and (max-width: 1200px) {
   .container {
     max-width: 95rem;
@@ -332,6 +425,23 @@ main {
   }
   .about__img img {
     width: 80%;
+  }
+  .portfolio {
+    padding: 30px 0;
+  }
+  .portfolio__item {
+    flex-wrap: wrap;
+    padding: 0;
+    margin-bottom: 25px;
+  }
+  .portfolio__img {
+    width: 100%;
+    height: 250px;
+    border-radius: 0;
+  }
+  .portfolio__info {
+    width: 100%;
+    padding: 20px;
   }
 }
 @media screen and (max-width: 576px) {
